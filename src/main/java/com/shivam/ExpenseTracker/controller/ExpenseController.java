@@ -12,11 +12,19 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@CrossOrigin(origins = "http://localhost:3000")
 @RestController
 @RequestMapping("/api/expenses")
 @RequiredArgsConstructor
 public class ExpenseController {
+
+    // The ExpenseController class handles HTTP requests related to expenses.
+    // It provides endpoints for CRUD operations on expenses.
+    // The controller uses the ExpenseService to perform the actual operations.
+
+    // The @CrossOrigin annotation allows cross-origin requests from the specified origin.
+    // The @RestController annotation indicates that this class is a RESTful controller.
+    // The @RequestMapping annotation specifies the base URL for all endpoints in this controller.
+    // The @RequiredArgsConstructor annotation generates a constructor with required arguments (final fields).
 
     private final ExpenseService expenseService;
 

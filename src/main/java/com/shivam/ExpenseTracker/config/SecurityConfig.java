@@ -1,5 +1,9 @@
 package com.shivam.ExpenseTracker.config;
-
+// This configuration class sets up basic security for the application using Spring Security.
+// It defines a filter chain that requires authentication for all requests to the "/api/expenses/**" endpoint,
+// while allowing all other requests to be accessed without authentication.
+// It also configures an in-memory user with username "shivam" and password "password" for testing purposes.
+// CSRF protection is disabled for simplicity, but it should be enabled in production environments.
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.Customizer;
